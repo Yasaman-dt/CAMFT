@@ -111,24 +111,7 @@
       text-align: justify;
     }
 
-    /* ---------------- TEASER ---------------- */
 
-    .teaser {
-      text-align: center;
-      margin-top: 35px;
-    }
-
-    .teaser img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    .caption {
-      font-size: 14px;
-      color: #666;
-      margin-top: 10px;
-      text-align: center;
-    }
 
     /* ---------------- HIGHLIGHTS ---------------- */
 
@@ -221,57 +204,93 @@
       }
     }
 
-      /* ---------------- PAPER FIGURES ---------------- */
+      /* ---------------- PAPER TEASER and FIGURES ---------------- */
 
-  .teaser-image {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto;
-  }
+    .teaser {
+      text-align: center;
+      margin-top: 35px;
+    }
 
-  .method-grid {
-    display: grid;
-    grid-template-columns: 0.35fr 0.65fr;
-    gap: 22px;
-    align-items: center;
-    margin-top: 30px;
-  }
+    .teaser img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
 
-  .method-panel {
-    text-align: center;
-  }
-
-  .method-panel img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .method-panel h3 {
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: 600;
-  }
-
-  .method-caption {
-    max-width: 950px;
-    margin: 25px auto 0 auto;
-    font-size: 15px;
-    color: #555;
-    text-align: justify;
-  }
-
-  @media (max-width: 750px) {
+    .caption {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .teaser-image {
+      display: block;
+      width: 70%;
+      max-width: 650px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
     .method-grid {
-      grid-template-columns: 1fr;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
     }
-
+    
     .method-panel {
-      margin-bottom: 25px;
+      text-align: center;
     }
-  }
+    
+    .method-panel:first-child {
+      width: 32%;
+    }
+    
+    .method-panel-wide {
+      width: 55%;
+    }
+    
+    .method-panel img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .method-panel h3 {
+      font-size: 15px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+  
+    .method-caption {
+      max-width: 950px;
+      margin: 25px auto 0 auto;
+      font-size: 15px;
+      color: #555;
+      text-align: justify;
+    }
+  
+    @media (max-width: 750px) {
+    
+      .teaser-image {
+        width: 95%;
+      }
+    
+      .method-grid {
+        flex-direction: column;
+      }
+    
+      .method-panel:first-child,
+      .method-panel-wide {
+        width: 95%;
+      }
+    
+      .method-panel {
+        margin-bottom: 25px;
+      }
+    }
   </style>
     
 </head>
