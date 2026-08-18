@@ -282,24 +282,20 @@
   <!-- ====================================================== -->
 
   <section class="teaser">
-
-    <!--
-    We will add your actual teaser image here later.
-
-    Example:
-    <img src="assets/teaser.png" alt="MF-T and CAMF overview">
-    -->
-
-    <div style="
-      background:#f5f5f5;
-      padding:70px 20px;
-      border-radius:12px;
-      color:#777;
-      font-size:20px;
-    ">
-      Your main paper figure / generated samples will go here
-    </div>
-
+  
+    <img
+      src="assets/1_teaser.png"
+      alt="Overview of MF-T and CAMF"
+      class="teaser-image"
+    >
+  
+    <p class="caption">
+      <strong>MF-T + CAMF</strong> adapts a source-domain diffusion or
+      flow model with any output parameterization into a high-quality
+      few-step MeanFlow generator in a target domain, with
+      NFE<sub>trg</sub> ≪ NFE<sub>src</sub>.
+    </p>
+  
   </section>
 
 
@@ -386,19 +382,56 @@
       <strong>Continuous Adversarial MeanFlow (CAMF)</strong>.
     </p>
 
-    <div class="method-image">
-
-      <div style="
-        background:#f5f5f5;
-        padding:80px 20px;
-        border-radius:12px;
-        color:#777;
-        font-size:20px;
-      ">
-        Figure 3: MF-T + CAMF framework will go here
+    <div class="method-grid">
+    
+      <!-- MF-T -->
+      <div class="method-panel">
+    
+        <img
+          src="assets/3_3_MFA.png"
+          alt="MeanFlow-Transfer"
+        >
+    
+        <h3>
+          (a) MeanFlow-Transfer (MF-T)
+        </h3>
+    
       </div>
-
+    
+    
+      <!-- CAMF -->
+      <div class="method-panel method-panel-wide">
+    
+        <img
+          src="assets/3_3_CAMF.png"
+          alt="Continuous Adversarial MeanFlow"
+        >
+    
+        <h3>
+          (b) Continuous Adversarial MeanFlow (CAMF)
+        </h3>
+    
+      </div>
+    
     </div>
+    
+    
+    <p class="method-caption">
+    
+      <strong>Overview of our two-stage framework.</strong>
+    
+      <strong>(a) MF-T:</strong>
+      A pretrained source generator with an arbitrary output
+      parameterization is mapped to a shared velocity representation
+      and adapted into a target-domain MeanFlow model.
+    
+      <strong>(b) CAMF:</strong>
+      The MeanFlow model transports the noisy state to a predicted
+      endpoint, while the discriminator compares the average change
+      of its potential along real and model-predicted target-domain
+      transport segments.
+    
+    </p>
 
     <h3>MeanFlow-Transfer (MF-T)</h3>
 
