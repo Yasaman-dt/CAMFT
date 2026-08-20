@@ -568,128 +568,53 @@
 
   </section>
 
+/* ---------------- QUANTITATIVE RESULTS ---------------- */
 
-<!-- ====================================================== -->
-<!-- QUANTITATIVE RESULTS -->
-<!-- ====================================================== -->
+.paper-results-row {
+  display: grid;
+  grid-template-columns: 55px repeat(4, 1fr);
+  gap: 4px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
 
-<section id="quantitative">
+.paper-results-row img {
+  width: 65%;
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-  <h2>Quantitative Results</h2>
+.dataset-name {
+  text-align: center;
+  font-size: 13px;
+}
 
-  <p>
-    We evaluate MF-T and MF-T + CAMF across heterogeneous source
-    architectures and target domains. CAMF consistently improves
-    the few-step generation quality obtained after MeanFlow transfer.
-  </p>
+.results-header {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+}
 
+.results-header span {
+  font-size: 10px;
+  font-weight: normal;
+  color: #555;
+}
 
-  <!-- Header row -->
-  <div class="paper-results-row results-header">
-    <div>Dataset</div>
-    <div><strong>iMF-XL/2</strong><br><span>2 → 2 NFE</span></div>
-    <div><strong>SiT-XL/2</strong><br><span>250 → 4 NFE</span></div>
-    <div><strong>DiT-XL/2</strong><br><span>250 → 8 NFE</span></div>
-    <div><strong>JiT-H/16</strong><br><span>50 → 4 NFE</span></div>
-  </div>
+@media (max-width: 700px) {
+  #quantitative {
+    overflow-x: auto;
+  }
 
-
-  <!-- CUB -->
-  <div class="paper-results-row">
-
-    <div class="dataset-name">
-      <strong>CUB</strong>
-    </div>
-
-    <div>
-      <img src="assets/cub_birds/imf_twolines.png"
-           alt="iMF results on CUB">
-    </div>
-
-    <div>
-      <img src="assets/cub_birds/SiT_twolines.png"
-           alt="SiT results on CUB">
-    </div>
-
-    <div>
-      <img src="assets/cub_birds/DiT_twolines_8nfe.png"
-           alt="DiT results on CUB">
-    </div>
-
-    <div>
-      <img src="assets/cub_birds/JiT_twolines_4nfe.png"
-           alt="JiT results on CUB">
-    </div>
-
-  </div>
-
-
-  <!-- ArtBench -->
-  <div class="paper-results-row">
-
-    <div class="dataset-name">
-      <strong>ArtB.</strong>
-    </div>
-
-    <div>
-      <img src="assets/art-bench/imf_twolines.png"
-           alt="iMF results on ArtBench">
-    </div>
-
-    <div>
-      <img src="assets/art-bench/SiT_twolines.png"
-           alt="SiT results on ArtBench">
-    </div>
-
-    <div>
-      <img src="assets/art-bench/dit-twolines-8nfe.png"
-           alt="DiT results on ArtBench">
-    </div>
-
-    <div>
-      <img src="assets/art-bench/JiT_twolines_4nfe.png"
-           alt="JiT results on ArtBench">
-    </div>
-
-  </div>
-
-
-  <!-- Cars -->
-  <div class="paper-results-row">
-
-    <div class="dataset-name">
-      <strong>Cars</strong>
-    </div>
-
-    <div>
-      <img src="assets/stanford-cars/imf_twolines.png"
-           alt="iMF results on Cars">
-    </div>
-
-    <div>
-      <img src="assets/stanford-cars/SiT_twolines.png"
-           alt="SiT results on Cars">
-    </div>
-
-    <div>
-      <img src="assets/stanford-cars/DiT_twolines_8nfe.png"
-           alt="DiT results on Cars">
-    </div>
-
-    <div>
-      <img src="assets/stanford-cars/JiT_twolines_4nfe.png"
-           alt="JiT results on Cars">
-    </div>
-
-  </div>
-
-  <p class="caption">
-    Quantitative results across CUB, ArtBench, and Stanford Cars
-    using heterogeneous source models.
-  </p>
-
-</section>
-
+  .paper-results-row {
+    min-width: 700px;
+  }
+}
 
   <!-- ====================================================== -->
   <!-- CITATION -->
