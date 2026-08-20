@@ -285,59 +285,52 @@
 
     /* ---------------- QUANTITATIVE RESULTS ---------------- */
     
-    .dataset-title {
-      text-align: center;
-      font-size: 22px;
-      margin-top: 40px;
-      margin-bottom: 15px;
-    }
-    
-    .results-grid {
+    .paper-results-row {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      align-items: start;
-      margin-top: 15px;
-      margin-bottom: 40px;
+      grid-template-columns: 70px repeat(4, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
     }
     
-    .result-panel {
-      text-align: center;
-    }
-    
-    .result-panel img {
-      width: 65%;
-      max-width: 160px;
+    .paper-results-row img {
+      width: 100%;
+      max-width: 180px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
     
-    .result-panel p {
+    .dataset-name {
       text-align: center;
-      font-size: 13px;
-      margin-top: 8px;
-      line-height: 1.35;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .results-header {
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .results-header span {
+      font-size: 11px;
+      font-weight: normal;
       color: #555;
     }
     
-    @media (max-width: 900px) {
-      .results-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 550px) {
-      .results-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 700px) {
+      #quantitative {
+        overflow-x: auto;
       }
     
-      .result-panel img {
-        width: 55%;
-        max-width: 180px;
+      .paper-results-row {
+        min-width: 750px;
       }
     }
-
     
   </style>
     
