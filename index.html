@@ -526,35 +526,144 @@
   </section>
 
 
-  <!-- ====================================================== -->
-  <!-- QUALITATIVE RESULTS -->
-  <!-- ====================================================== -->
+<!-- ====================================================== -->
+<!-- QUANTITATIVE RESULTS -->
+<!-- ====================================================== -->
 
-  <section id="qualitative">
+<section id="quantitative">
 
-    <h2>Qualitative Results</h2>
+  <h2>Quantitative Results</h2>
 
-    <p>
-      MF-T + CAMF enables few-step target-domain generation from
-      several heterogeneous ImageNet-pretrained source models.
-    </p>
+  <p>
+    We evaluate MF-T and MF-T + CAMF across heterogeneous source
+    architectures and target domains. CAMF consistently improves
+    the few-step generation quality obtained after MeanFlow transfer.
+  </p>
 
-    <div class="method-image">
 
-      <div style="
-        background:#f5f5f5;
-        padding:80px 20px;
-        border-radius:12px;
-        color:#777;
-        font-size:20px;
-      ">
-        Generated samples from CUB, ArtBench, Cars, Food, etc.
-        will go here
-      </div>
+  <!-- CUB -->
 
+  <h3 class="dataset-title">CUB-200</h3>
+
+  <div class="results-grid">
+
+    <div class="result-panel">
+      <img
+        src="assets/cub_birds/imf_twolines.png"
+        alt="iMF results on CUB"
+      >
+      <p><strong>iMF-XL/2</strong> · 2 → 2 NFE</p>
     </div>
 
-  </section>
+    <div class="result-panel">
+      <img
+        src="assets/cub_birds/SiT_twolines.png"
+        alt="SiT results on CUB"
+      >
+      <p><strong>SiT-XL/2</strong> · 250 → 4 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/cub_birds/DiT_twolines_8nfe.png"
+        alt="DiT results on CUB"
+      >
+      <p><strong>DiT-XL/2</strong> · 250 → 8 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/cub_birds/JiT_twolines_4nfe.png"
+        alt="JiT results on CUB"
+      >
+      <p><strong>JiT-H/16</strong> · 50 → 4 NFE</p>
+    </div>
+
+  </div>
+
+
+  <!-- ARTBENCH -->
+
+  <h3 class="dataset-title">ArtBench</h3>
+
+  <div class="results-grid">
+
+    <div class="result-panel">
+      <img
+        src="assets/art-bench/imf_twolines.png"
+        alt="iMF results on ArtBench"
+      >
+      <p><strong>iMF-XL/2</strong> · 2 → 2 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/art-bench/SiT_twolines.png"
+        alt="SiT results on ArtBench"
+      >
+      <p><strong>SiT-XL/2</strong> · 250 → 4 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/art-bench/dit-twolines-8nfe.png"
+        alt="DiT results on ArtBench"
+      >
+      <p><strong>DiT-XL/2</strong> · 250 → 8 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/art-bench/JiT_twolines_4nfe.png"
+        alt="JiT results on ArtBench"
+      >
+      <p><strong>JiT-H/16</strong> · 50 → 4 NFE</p>
+    </div>
+
+  </div>
+
+
+  <!-- STANFORD CARS -->
+
+  <h3 class="dataset-title">Stanford Cars</h3>
+
+  <div class="results-grid">
+
+    <div class="result-panel">
+      <img
+        src="assets/stanford-cars/imf_twolines.png"
+        alt="iMF results on Stanford Cars"
+      >
+      <p><strong>iMF-XL/2</strong> · 2 → 2 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/stanford-cars/SiT_twolines.png"
+        alt="SiT results on Stanford Cars"
+      >
+      <p><strong>SiT-XL/2</strong> · 250 → 4 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/stanford-cars/DiT_twolines_8nfe.png"
+        alt="DiT results on Stanford Cars"
+      >
+      <p><strong>DiT-XL/2</strong> · 250 → 8 NFE</p>
+    </div>
+
+    <div class="result-panel">
+      <img
+        src="assets/stanford-cars/JiT_twolines_4nfe.png"
+        alt="JiT results on Stanford Cars"
+      >
+      <p><strong>JiT-H/16</strong> · 50 → 4 NFE</p>
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- ====================================================== -->
