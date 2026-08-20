@@ -282,6 +282,63 @@
         margin-bottom: 25px;
       }
     }
+
+    /* ---------------- QUANTITATIVE RESULTS ---------------- */
+    
+    .dataset-title {
+      text-align: center;
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      align-items: start;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+    
+    .result-panel {
+      text-align: center;
+    }
+    
+    .result-panel img {
+      width: 65%;
+      max-width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .result-panel p {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.35;
+      color: #555;
+    }
+    
+    @media (max-width: 900px) {
+      .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 550px) {
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .result-panel img {
+        width: 55%;
+        max-width: 180px;
+      }
+    }
+
+    
   </style>
     
 </head>
@@ -395,13 +452,8 @@
   </section>
 
 
-  <!-- ====================================================== -->
-  <!-- ABSTRACT -->
-  <!-- ====================================================== -->
 
   <section id="abstract">
-
-    <h2>Abstract</h2>
 
     <p>
       Training fast generators on new domains with limited data remains
