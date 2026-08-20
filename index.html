@@ -568,54 +568,42 @@
 
   </section>
 
-/* ---------------- QUANTITATIVE RESULTS ---------------- */
-
-.paper-results-row {
-  display: grid;
-  grid-template-columns: 55px repeat(4, 1fr);
-  gap: 4px;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.paper-results-row img {
-  width: 65%;
-  max-width: 120px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.dataset-name {
-  text-align: center;
-  font-size: 13px;
-}
-
-.results-header {
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.3;
-}
-
-.results-header span {
-  font-size: 10px;
-  font-weight: normal;
-  color: #555;
-}
-
-@media (max-width: 700px) {
-  #quantitative {
-    overflow-x: auto;
-  }
-
-  .paper-results-row {
-    min-width: 700px;
-  }
-}
-
+<!-- ====================================================== -->
+<!-- QUANTITATIVE RESULTS -->
+<!-- ====================================================== -->
+  
+  <section id="quantitative">
+  
+    <h2>Quantitative Results</h2>
+  
+    <!-- Header -->
+    <div class="paper-results-row results-header">
+      <div>Dataset</div>
+      <div>DiT<br><span>ε-prediction</span></div>
+      <div>SiT<br><span>v-prediction</span></div>
+      <div>JiT<br><span>x-prediction</span></div>
+      <div>iMF<br><span>u-prediction</span></div>
+    </div>
+  
+    <!-- CUB -->
+    <div class="paper-results-row">
+      <div class="dataset-name">CUB</div>
+      <img src="assets/YOUR_CUB_DIT_IMAGE.png">
+      <img src="assets/YOUR_CUB_SIT_IMAGE.png">
+      <img src="assets/YOUR_CUB_JIT_IMAGE.png">
+      <img src="assets/YOUR_CUB_IMF_IMAGE.png">
+    </div>
+  
+    <!-- Cars -->
+    <div class="paper-results-row">
+      <div class="dataset-name">Cars</div>
+      <img src="assets/YOUR_CARS_DIT_IMAGE.png">
+      <img src="assets/YOUR_CARS_SIT_IMAGE.png">
+      <img src="assets/YOUR_CARS_JIT_IMAGE.png">
+      <img src="assets/YOUR_CARS_IMF_IMAGE.png">
+    </div>
+  
+  </section>
   <!-- ====================================================== -->
   <!-- CITATION -->
   <!-- ====================================================== -->
