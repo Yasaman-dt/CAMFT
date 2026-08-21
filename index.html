@@ -6,7 +6,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Continuous Adversarial Mean Flow Transfer</title>
+  <title>Continuous Adversarial MeanFlow Transfer</title>
+
+
+  <!-- =====================================================
+       MATHJAX
+       ===================================================== -->
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
 
   <style>
 
@@ -123,7 +144,7 @@
 
 
     /* =====================================================
-       TEASER
+       TEASER / FIGURE 1
        ===================================================== */
 
     .teaser {
@@ -133,14 +154,14 @@
 
     .teaser-image {
       display: block;
-      width: 70%;
-      max-width: 700px;
+      width: 50%;
+      max-width: 500px;
       height: auto;
       margin: 0 auto;
     }
 
     .teaser-caption {
-      max-width: 750px;
+      max-width: 700px;
       margin: 15px auto 0 auto;
       font-size: 15px;
       line-height: 1.6;
@@ -224,9 +245,12 @@
     }
 
     .results-header span {
-      font-size: 11px;
+      display: inline-block;
+      margin-top: 3px;
+      font-size: 10px;
       font-weight: normal;
       color: #555;
+      line-height: 1.4;
     }
 
     .results-caption {
@@ -267,20 +291,19 @@
       text-align: center;
     }
 
-    .method-figure img {
+
+    /* =====================================================
+       SAME HEIGHT FOR MF-T AND CAMF
+       ===================================================== */
+
+    .mf-image,
+    .camf-image {
       display: block;
+      height: 250px;
       width: auto;
       max-width: 100%;
-      height: auto;
+      object-fit: contain;
       margin: 0 auto;
-    }
-
-    .mf-image {
-      max-width: 600px !important;
-    }
-
-    .camf-image {
-      max-width: 880px !important;
     }
 
     .method-caption {
@@ -346,26 +369,40 @@
         font-size: 17px;
       }
 
+
+      /* Teaser */
+
       .teaser-image {
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+        max-width: 500px;
       }
+
+
+      /* Highlights */
 
       .highlights {
         grid-template-columns: 1fr;
       }
+
+
+      /* Generation table */
 
       #generated-results {
         overflow-x: auto;
       }
 
       .paper-results-row {
-        min-width: 750px;
+        min-width: 800px;
       }
+
+
+      /* Method figures */
 
       .mf-image,
       .camf-image {
-        max-width: 100% !important;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
       }
 
     }
@@ -387,60 +424,62 @@
   <header class="hero">
 
     <h1>
-      Continuous Adversarial Mean Flow Transfer
+      Continuous Adversarial MeanFlow Transfer
     </h1>
 
-  <div class="authors">
-  
-    <a
-      href="https://scholar.google.ca/citations?user=_etyGRcAAAAJ&hl=en&oi=ao"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Yara Bahram*
-    </a>,
-  
-    <a
-      href="https://scholar.google.ca/citations?user=VqHpMu4AAAAJ&hl=en&oi=ao"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Zahra Dehghani*
-    </a>,
-  
-    <a
-      href="https://scholar.google.ca/citations?user=sANOdsQAAAAJ&hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Mélodie Desbos
-    </a>,
-  
-    <a
-      href="https://scholar.google.ca/citations?user=TmfbdagAAAAJ&hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Eric Granger
-    </a>,
-  
-    <a
-      href="https://scholar.google.ca/citations?user=QyBEFv0AAAAJ&hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Pablo Piantanida
-    </a>,
-  
-    <a
-      href="https://scholar.google.ca/citations?user=TwJO3P5d1S8C&hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Mohammadhadi Shateri
-    </a>
-  
-  </div>
+
+    <div class="authors">
+
+      <a
+        href="https://scholar.google.ca/citations?user=_etyGRcAAAAJ&hl=en&oi=ao"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Yara Bahram*
+      </a>,
+
+      <a
+        href="https://scholar.google.ca/citations?user=VqHpMu4AAAAJ&hl=en&oi=ao"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Zahra Dehghani*
+      </a>,
+
+      <a
+        href="https://scholar.google.ca/citations?user=sANOdsQAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mélodie Desbos
+      </a>,
+
+      <a
+        href="https://scholar.google.ca/citations?user=TmfbdagAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Eric Granger
+      </a>,
+
+      <a
+        href="https://scholar.google.ca/citations?user=QyBEFv0AAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pablo Piantanida
+      </a>,
+
+      <a
+        href="https://scholar.google.ca/citations?user=TwJO3P5d1S8C&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mohammadhadi Shateri
+      </a>
+
+    </div>
+
 
     <div class="affiliation">
       LIVIA, ILLS, ÉTS Montréal, Canada
@@ -449,6 +488,7 @@
     <div class="equal">
       * Equal contribution
     </div>
+
 
     <div class="buttons">
 
@@ -463,6 +503,8 @@
       <a
         class="button"
         href="https://github.com/yaramohamadi/CAMFT/tree/main"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         💻 Code
       </a>
@@ -472,8 +514,9 @@
   </header>
 
 
+
   <!-- =====================================================
-       2. TEASER
+       2. TEASER / FIGURE 1
        ===================================================== -->
 
   <section class="teaser">
@@ -486,14 +529,16 @@
 
     <p class="teaser-caption">
 
-      <strong>MF-T + CAMF</strong> adapts pretrained diffusion and flow
-      models with heterogeneous output parameterizations into high-quality
-      few-step MeanFlow generators for new target domains, with
-      NFE<sub>trg</sub> ≪ NFE<sub>src</sub>.
+      <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
+      or flow model with any output parameterization into a high-quality
+      few-step MeanFlow (MF) generator in a target domain with
+      \(\mathrm{NFE}_{\mathrm{trg}} \ll
+      \mathrm{NFE}_{\mathrm{src}}\).
 
     </p>
 
   </section>
+
 
 
   <!-- =====================================================
@@ -508,7 +553,7 @@
       <div class="highlight-box">
 
         <div class="highlight-number">
-          x / ε / v / u
+          \(x\ /\ \epsilon\ /\ v\ /\ u\)
         </div>
 
         <div class="highlight-text">
@@ -549,6 +594,7 @@
   </section>
 
 
+
   <!-- =====================================================
        4. TARGET-DOMAIN GENERATIONS
        ===================================================== -->
@@ -560,40 +606,85 @@
     </h2>
 
 
+    <!-- MODEL HEADERS -->
+
     <div class="paper-results-row results-header">
 
       <div>
         Dataset
       </div>
 
-      <div>
-        iMF
-        <br>
-        <span>u-prediction · 2 NFE</span>
-      </div>
 
       <div>
-        SiT
+
+        iMF-XL/2
+
         <br>
-        <span>v-prediction · 4 NFE</span>
+
+        <span>
+          \(u\)-prediction
+          <br>
+          \(\mathrm{NFE}_{\mathrm{src}\rightarrow\mathrm{trg}}
+          = 2 \rightarrow 2\)
+        </span>
+
       </div>
 
-      <div>
-        DiT
-        <br>
-        <span>ε-prediction · 8 NFE</span>
-      </div>
 
       <div>
-        JiT
+
+        SiT-XL/2
+
         <br>
-        <span>x-prediction · 4 NFE</span>
+
+        <span>
+          \(v\)-prediction
+          <br>
+          \(\mathrm{NFE}_{\mathrm{src}\rightarrow\mathrm{trg}}
+          = 250 \rightarrow 4\)
+        </span>
+
+      </div>
+
+
+      <div>
+
+        DiT-XL/2
+
+        <br>
+
+        <span>
+          \(\epsilon\)-prediction
+          <br>
+          \(\mathrm{NFE}_{\mathrm{src}\rightarrow\mathrm{trg}}
+          = 250 \rightarrow 8\)
+        </span>
+
+      </div>
+
+
+      <div>
+
+        JiT-H/16
+
+        <br>
+
+        <span>
+          \(x\)-prediction
+          <br>
+          \(\mathrm{NFE}_{\mathrm{src}\rightarrow\mathrm{trg}}
+          = 50 \rightarrow 4\)
+        </span>
+
       </div>
 
     </div>
 
 
-    <!-- CUB -->
+
+    <!-- =====================================================
+         CUB
+         ===================================================== -->
 
     <div class="paper-results-row">
 
@@ -601,20 +692,24 @@
         CUB
       </div>
 
+
       <img
         src="assets/cub_birds/imf_twolines.png"
         alt="CUB iMF"
       >
+
 
       <img
         src="assets/cub_birds/SiT_twolines_4nfe.png"
         alt="CUB SiT"
       >
 
+
       <img
         src="assets/cub_birds/DiT_twolines_8nfe.png"
         alt="CUB DiT"
       >
+
 
       <img
         src="assets/cub_birds/JiT_twolines_4nfe.png"
@@ -624,7 +719,10 @@
     </div>
 
 
-    <!-- CARS -->
+
+    <!-- =====================================================
+         CARS
+         ===================================================== -->
 
     <div class="paper-results-row">
 
@@ -632,20 +730,24 @@
         Cars
       </div>
 
+
       <img
         src="assets/stanford-cars/imf_twolines.png"
         alt="Cars iMF"
       >
+
 
       <img
         src="assets/stanford-cars/SiT_twolines.png"
         alt="Cars SiT"
       >
 
+
       <img
         src="assets/stanford-cars/DiT_twolines_8nfe.png"
         alt="Cars DiT"
       >
+
 
       <img
         src="assets/stanford-cars/JiT_twolines_4nfe.png"
@@ -655,7 +757,10 @@
     </div>
 
 
-    <!-- ARTBENCH -->
+
+    <!-- =====================================================
+         ARTBENCH
+         ===================================================== -->
 
     <div class="paper-results-row">
 
@@ -663,20 +768,24 @@
         ArtBench
       </div>
 
+
       <img
         src="assets/art-bench/imf_twolines.png"
         alt="ArtBench iMF"
       >
+
 
       <img
         src="assets/art-bench/SiT_twolines.png"
         alt="ArtBench SiT"
       >
 
+
       <img
         src="assets/art-bench/dit-twolines-8nfe.png"
         alt="ArtBench DiT"
       >
+
 
       <img
         src="assets/art-bench/JiT_twolines_4nfe.png"
@@ -686,16 +795,17 @@
     </div>
 
 
+
     <p class="results-caption">
 
-      Target-domain generations from heterogeneous ImageNet-pretrained
-      source models using MF-T + CAMF. Columns correspond to different
-      source architectures and parameterizations, evaluated at their
-      target few-step sampling budgets.
+      Target-domain generated images using
+      <strong>MF-T + CAMF</strong> initialized from different
+      source models. Images are uncurated.
 
     </p>
 
   </section>
+
 
 
   <!-- =====================================================
@@ -708,32 +818,37 @@
       Method
     </h2>
 
+
     <p class="method-intro">
 
       Our framework consists of two stages.
-      <strong>MeanFlow-Transfer (MF-T)</strong> provides a common interface
-      for pretrained diffusion and flow models with heterogeneous output
-      parameterizations. Source models predicting <em>x</em>, ε,
-      <em>v</em>, or <em>u</em> are mapped into a shared velocity
-      representation, which is used to initialize and adapt a few-step
-      MeanFlow generator to the target domain.
 
-      <strong>Continuous Adversarial MeanFlow (CAMF)</strong> then refines
-      the adapted generator by extending continuous adversarial learning
-      from instantaneous velocities to MeanFlow's finite-interval
-      transport. This improves generation quality while preserving
-      efficient few-step inference.
+      <strong>MeanFlow-Transfer (MF-T)</strong> provides a common
+      interface for pretrained diffusion and flow models with
+      heterogeneous output parameterizations. Source models predicting
+      \(x\), \(\epsilon\), \(v\), or \(u\) are mapped into a shared
+      instantaneous-velocity representation, which is used to initialize
+      and adapt a few-step MeanFlow generator \(u_\theta\) to the
+      target domain.
+
+      <strong>Continuous Adversarial MeanFlow (CAMF)</strong> then
+      refines the adapted generator by extending continuous adversarial
+      learning from instantaneous velocities to MeanFlow's
+      finite-interval average velocities. This improves generation
+      quality while preserving efficient few-step inference.
 
     </p>
 
 
+
     <!-- =====================================================
-         6. MF-T
+         6. MEANFLOW-TRANSFER
          ===================================================== -->
 
     <h3 class="method-title">
       MeanFlow-Transfer (MF-T)
     </h3>
+
 
     <div class="method-figure">
 
@@ -743,18 +858,19 @@
         alt="MeanFlow-Transfer"
       >
 
+
       <p class="method-caption">
 
         <strong>MeanFlow-Transfer (MF-T).</strong>
         A pretrained source generator with an arbitrary output
-        parameterization is mapped to a shared instantaneous-velocity
-        representation and used to initialize a target-domain MeanFlow
-        generator. MF-T therefore performs target-domain adaptation and
-        sampling acceleration within a common MeanFlow formulation.
+        parameterization is mapped to a shared velocity representation
+        and adapted into a target-domain MeanFlow (MF) model that
+        predicts the finite-interval average velocity \(u_\theta\).
 
       </p>
 
     </div>
+
 
 
     <!-- =====================================================
@@ -765,6 +881,7 @@
       Continuous Adversarial MeanFlow (CAMF)
     </h3>
 
+
     <div class="method-figure">
 
       <img
@@ -773,21 +890,23 @@
         alt="Continuous Adversarial MeanFlow"
       >
 
+
       <p class="method-caption">
 
         <strong>Continuous Adversarial MeanFlow (CAMF).</strong>
-        Starting from the adapted MeanFlow generator, CAMF applies
-        adversarial post-training directly to finite-interval transport.
-        The discriminator contrasts potential changes along real and
-        model-predicted target-domain transport intervals, improving
-        fine-detail generation without increasing the few-step sampling
-        cost at inference time.
+        The MF model transports \(z_t\) to the predicted endpoint
+        \(\hat{z}_r = z_t - (t-r)u_\theta\), and the discriminator
+        compares the average change of the potential \(D_\psi\)
+        along the real and model-predicted target-domain transport
+        segments through \(A_{\mathrm{real}}\) and
+        \(A_{\mathrm{fake}}\).
 
       </p>
 
     </div>
 
   </section>
+
 
 
   <!-- =====================================================
@@ -804,9 +923,10 @@
       If you find this work useful, please consider citing:
     </p>
 
+
 <pre>
-@inproceedings{bahram2026meanflowadaptation,
-  title  = {Continuous Adversarial Mean Flow Transfer},
+@inproceedings{bahram2026meanflowtransfer,
+  title  = {Continuous Adversarial MeanFlow Transfer},
   author = {Bahram, Yara and Dehghani, Zahra and Desbos, Mélodie
             and Granger, Eric and Piantanida, Pablo
             and Shateri, Mohammadhadi},
@@ -817,12 +937,13 @@
   </section>
 
 
+
   <!-- =====================================================
        FOOTER
        ===================================================== -->
 
   <footer>
-    Continuous Adversarial Mean Flow Transfer
+    Continuous Adversarial MeanFlow Transfer
   </footer>
 
 
