@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MeanFlow Transfer + CAMF</title>
+  <title>Continuous Adversarial MeanFlow Transfer</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -26,12 +28,15 @@
       padding: 40px 25px;
     }
 
-    /* ---------------- HEADER ---------------- */
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
 
     .hero {
       text-align: center;
       padding-top: 45px;
-      padding-bottom: 40px;
+      padding-bottom: 35px;
     }
 
     .hero h1 {
@@ -68,7 +73,10 @@
       margin-top: 5px;
     }
 
-    /* ---------------- BUTTONS ---------------- */
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
 
     .buttons {
       margin-top: 28px;
@@ -93,10 +101,13 @@
       transform: translateY(-2px);
     }
 
-    /* ---------------- SECTIONS ---------------- */
+
+    /* =====================================================
+       GENERAL SECTIONS
+       ===================================================== */
 
     section {
-      margin-top: 65px;
+      margin-top: 60px;
     }
 
     section h2 {
@@ -112,14 +123,16 @@
     }
 
 
-
-    /* ---------------- HIGHLIGHTS ---------------- */
+    /* =====================================================
+       HIGHLIGHTS
+       ===================================================== */
 
     .highlights {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      margin-top: 30px;
+      margin-top: 15px;
+      margin-bottom: 50px;
     }
 
     .highlight-box {
@@ -140,20 +153,105 @@
       font-size: 15px;
     }
 
-    /* ---------------- METHOD ---------------- */
 
-    .method-image {
+    /* =====================================================
+       GENERATED RESULTS
+       ===================================================== */
+
+    #generated-results {
+      margin-top: 30px;
+    }
+
+    .paper-results-row {
+      display: grid;
+      grid-template-columns: 75px repeat(4, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .paper-results-row img {
+      width: 100%;
+      max-width: 190px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .dataset-name {
       text-align: center;
-      margin-top: 25px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .method-image img {
+    .results-header {
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .results-header span {
+      font-size: 11px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .results-caption {
+      max-width: 900px;
+      margin: 15px auto 0 auto;
+      color: #666;
+      font-size: 14px;
+      text-align: center;
+    }
+
+
+    /* =====================================================
+       METHOD
+       ===================================================== */
+
+    .method-intro {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .method-figure {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .method-figure img {
+      display: block;
+      width: auto;
       max-width: 100%;
-      border-radius: 8px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .mf-image {
+      max-width: 560px !important;
+    }
+
+    .camf-image {
+      max-width: 850px !important;
+    }
+
+    .method-caption {
+      max-width: 900px;
+      margin: 15px auto 0 auto;
+      font-size: 15px;
+      color: #555;
+      text-align: justify;
     }
 
 
-    /* ---------------- CITATION ---------------- */
+    /* =====================================================
+       CITATION
+       ===================================================== */
 
     pre {
       background: #f4f4f4;
@@ -163,7 +261,10 @@
       font-size: 14px;
     }
 
-    /* ---------------- FOOTER ---------------- */
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     footer {
       margin-top: 80px;
@@ -174,7 +275,10 @@
       font-size: 14px;
     }
 
-    /* ---------------- MOBILE ---------------- */
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
 
     @media (max-width: 700px) {
 
@@ -193,147 +297,23 @@
       .container {
         padding: 25px 18px;
       }
-    }
 
-      /* ---------------- PAPER TEASER and FIGURES ---------------- */
-
-    .teaser {
-      text-align: center;
-      margin-top: 35px;
-    }
-
-    .teaser img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    .caption {
-      font-size: 14px;
-      color: #666;
-      margin-top: 10px;
-      text-align: center;
-    }
-  
-    .teaser-image {
-      display: block;
-      width: 45%;
-      max-width: 43px;
-      height: auto;
-      margin: 0 auto;
-    }
-  
-    .method-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-    
-    .method-panel {
-      text-align: center;
-    }
-    
-    .method-panel:first-child {
-      width: 32%;
-    }
-    
-    .method-panel-wide {
-      width: 55%;
-    }
-    
-    .method-panel img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    
-    .method-panel h3 {
-      font-size: 15px;
-      margin-top: 10px;
-      font-weight: 600;
-    }
-  
-    .method-caption {
-      max-width: 950px;
-      margin: 25px auto 0 auto;
-      font-size: 15px;
-      color: #555;
-      text-align: justify;
-    }
-  
-    @media (max-width: 750px) {
-    
-      .teaser-image {
-        width: 95%;
-      }
-    
-      .method-grid {
-        flex-direction: column;
-      }
-    
-      .method-panel:first-child,
-      .method-panel-wide {
-        width: 95%;
-      }
-    
-      .method-panel {
-        margin-bottom: 25px;
-      }
-    }
-
-    /* ---------------- QUANTITATIVE RESULTS ---------------- */
-    
-    .paper-results-row {
-      display: grid;
-      grid-template-columns: 70px repeat(4, 1fr);
-      gap: 10px;
-      align-items: center;
-      padding: 12px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    
-    .paper-results-row img {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    
-    .dataset-name {
-      text-align: center;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    
-    .results-header {
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    
-    .results-header span {
-      font-size: 11px;
-      font-weight: normal;
-      color: #555;
-    }
-    
-    @media (max-width: 700px) {
-      #quantitative {
+      #generated-results {
         overflow-x: auto;
       }
-    
+
       .paper-results-row {
         min-width: 750px;
       }
+
+      .mf-image,
+      .camf-image {
+        max-width: 100% !important;
+      }
     }
-    
+
   </style>
-    
+
 </head>
 
 
@@ -341,9 +321,10 @@
 
 <div class="container">
 
-  <!-- ====================================================== -->
-  <!-- HEADER -->
-  <!-- ====================================================== -->
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
   <header class="hero">
 
@@ -352,12 +333,14 @@
     </h1>
 
     <div class="authors">
+
       <a href="#">Yara Bahram*</a>,
       <a href="#">Zahra Dehghani*</a>,
       <a href="#">Mélodie Desbos</a>,
       <a href="#">Eric Granger</a>,
       <a href="#">Pablo Piantanida</a>,
       <a href="#">Mohammadhadi Shateri</a>
+
     </div>
 
     <div class="affiliation">
@@ -370,8 +353,6 @@
 
     <div class="buttons">
 
-      <!-- We will replace these links later -->
-
       <a class="button" href="#">
         📄 Paper
       </a>
@@ -380,7 +361,10 @@
         📚 arXiv
       </a>
 
-      <a class="button" href="https://github.com/yaramohamadi/CAMFT/tree/main">
+      <a
+        class="button"
+        href="https://github.com/yaramohamadi/CAMFT/tree/main"
+      >
         💻 Code
       </a>
 
@@ -389,55 +373,50 @@
   </header>
 
 
-  <!-- ====================================================== -->
-  <!-- TEASER -->
-  <!-- ====================================================== -->
-
-  <section class="teaser">
-  
-    <img
-      src="assets/1_teaser.png"
-      alt="Overview of MF-T and CAMF"
-      class="teaser-image"
-    >
-  
-    <p class="caption">
-      <strong>MF-T + CAMF</strong> adapts a source-domain diffusion or
-      flow model with any output parameterization into a high-quality
-      few-step MeanFlow generator in a target domain, with
-      NFE<sub>trg</sub> ≪ NFE<sub>src</sub>.
-    </p>
-  
-  </section>
-
-
-  <!-- ====================================================== -->
-  <!-- SHORT MESSAGE -->
-  <!-- ====================================================== -->
+  <!-- =====================================================
+       HIGHLIGHTS
+       ===================================================== -->
 
   <section>
 
     <div class="highlights">
 
       <div class="highlight-box">
-        <div class="highlight-number">x / ε / v / u</div>
+
+        <div class="highlight-number">
+          x / ε / v / u
+        </div>
+
         <div class="highlight-text">
           Supports heterogeneous source parameterizations
         </div>
+
       </div>
 
+
       <div class="highlight-box">
-        <div class="highlight-number">29%</div>
+
+        <div class="highlight-number">
+          29%
+        </div>
+
         <div class="highlight-text">
           Average improvement in few-step FID from CAMF
         </div>
+
       </div>
 
+
       <div class="highlight-box">
-        <div class="highlight-number">125×</div>
+
+        <div class="highlight-number">
+          125×
+        </div>
+
         <div class="highlight-text">
           Fewer neural function evaluations
         </div>
+
       </div>
 
     </div>
@@ -445,198 +424,244 @@
   </section>
 
 
+  <!-- =====================================================
+       GENERATED TARGET-DOMAIN SAMPLES
+       ===================================================== -->
 
-  <section id="abstract">
-
-    <p>
-      Training fast generators on new domains with limited data remains
-      challenging for two reasons. First, adapting a pretrained diffusion
-      or flow model to a new domain leaves its costly multi-step sampling
-      unaddressed, and existing acceleration methods are tied to the source
-      parameterization—ε, x, v, or u—so heterogeneous pretrained models
-      share no common acceleration target.
-    </p>
-
-    <p>
-      We propose <strong>MeanFlow-Transfer (MF-T)</strong>, which maps
-      heterogeneous source outputs into a shared velocity representation,
-      initializes a MeanFlow generator from the source weights, and
-      optimizes a MeanFlow objective on the target domain.
-    </p>
-
-    <p>
-      We further introduce
-      <strong>Continuous Adversarial MeanFlow (CAMF)</strong>,
-      a post-training stage that extends continuous adversarial learning
-      from instantaneous velocities to MeanFlow's finite-interval average
-      velocities.
-    </p>
-
-  </section>
+  <section id="generated-results">
 
 
-  <!-- ====================================================== -->
-  <!-- METHOD -->
-  <!-- ====================================================== -->
+    <!-- MODEL HEADERS -->
 
-  <section id="method">
-
-    <h2>Method</h2>
-
-    <p>
-      Our framework consists of two stages:
-      <strong>MeanFlow-Transfer (MF-T)</strong> and
-      <strong>Continuous Adversarial MeanFlow (CAMF)</strong>.
-    </p>
-
-    <div class="method-grid">
-    
-      <!-- MF-T -->
-      <div class="method-panel">
-    
-        <img
-          src="assets/3_3_MFA.png"
-          alt="MeanFlow-Transfer"
-        >
-    
-        <h3>
-          (a) MeanFlow-Transfer (MF-T)
-        </h3>
-    
-      </div>
-    
-    
-      <!-- CAMF -->
-      <div class="method-panel method-panel-wide">
-    
-        <img
-          src="assets/3_3_CAMF.png"
-          alt="Continuous Adversarial MeanFlow"
-        >
-    
-        <h3>
-          (b) Continuous Adversarial MeanFlow (CAMF)
-        </h3>
-    
-      </div>
-    
-    </div>
-    
-    
-    <p class="method-caption">
-    
-      <strong>Overview of our two-stage framework.</strong>
-    
-      <strong>(a) MF-T:</strong>
-      A pretrained source generator with an arbitrary output
-      parameterization is mapped to a shared velocity representation
-      and adapted into a target-domain MeanFlow model.
-    
-      <strong>(b) CAMF:</strong>
-      The MeanFlow model transports the noisy state to a predicted
-      endpoint, while the discriminator compares the average change
-      of its potential along real and model-predicted target-domain
-      transport segments.
-    
-    </p>
-
-  </section>
-
-<!-- ====================================================== -->
-<!-- QUANTITATIVE RESULTS -->
-<!-- ====================================================== -->
-  
-  <section id="quantitative">
-  
-    <h2>Quantitative Results</h2>
-  
-    <!-- Header -->
     <div class="paper-results-row results-header">
-      <div>Dataset</div>
-    
+
       <div>
-        iMF<br>
+        Dataset
+      </div>
+
+      <div>
+        iMF
+        <br>
         <span>u-prediction · 2 NFE</span>
       </div>
-    
+
       <div>
-        SiT<br>
+        SiT
+        <br>
         <span>v-prediction · 4 NFE</span>
       </div>
-    
+
       <div>
-        DiT<br>
+        DiT
+        <br>
         <span>ε-prediction · 8 NFE</span>
       </div>
-    
+
       <div>
-        JiT<br>
+        JiT
+        <br>
         <span>x-prediction · 4 NFE</span>
       </div>
+
     </div>
 
 
     <!-- CUB -->
+
     <div class="paper-results-row">
-      <div class="dataset-name">CUB</div>
-    
-      <img src="assets/cub_birds/imf_twolines.png"
-           alt="CUB iMF 2 NFE">
-    
-      <img src="assets/cub_birds/SiT_twolines_4nfe.png"
-           alt="CUB SiT 4 NFE">
-    
-      <img src="assets/cub_birds/DiT_twolines_8nfe.png"
-           alt="CUB DiT 8 NFE">
-    
-      <img src="assets/cub_birds/JiT_twolines_4nfe.png"
-           alt="CUB JiT 4 NFE">
+
+      <div class="dataset-name">
+        CUB
+      </div>
+
+      <img
+        src="assets/cub_birds/imf_twolines.png"
+        alt="CUB iMF"
+      >
+
+      <img
+        src="assets/cub_birds/SiT_twolines_4nfe.png"
+        alt="CUB SiT"
+      >
+
+      <img
+        src="assets/cub_birds/DiT_twolines_8nfe.png"
+        alt="CUB DiT"
+      >
+
+      <img
+        src="assets/cub_birds/JiT_twolines_4nfe.png"
+        alt="CUB JiT"
+      >
+
     </div>
-    
-    
-    <!-- Cars -->
+
+
+    <!-- CARS -->
+
     <div class="paper-results-row">
-      <div class="dataset-name">Cars</div>
-    
-      <img src="assets/stanford-cars/imf_twolines.png"
-           alt="Cars iMF 2 NFE">
-    
-      <img src="assets/stanford-cars/SiT_twolines.png"
-           alt="Cars SiT 4 NFE">
-    
-      <img src="assets/stanford-cars/DiT_twolines_8nfe.png"
-           alt="Cars DiT 8 NFE">
-    
-      <img src="assets/stanford-cars/JiT_twolines_4nfe.png"
-           alt="Cars JiT 4 NFE">
+
+      <div class="dataset-name">
+        Cars
+      </div>
+
+      <img
+        src="assets/stanford-cars/imf_twolines.png"
+        alt="Cars iMF"
+      >
+
+      <img
+        src="assets/stanford-cars/SiT_twolines.png"
+        alt="Cars SiT"
+      >
+
+      <img
+        src="assets/stanford-cars/DiT_twolines_8nfe.png"
+        alt="Cars DiT"
+      >
+
+      <img
+        src="assets/stanford-cars/JiT_twolines_4nfe.png"
+        alt="Cars JiT"
+      >
+
     </div>
-    
-    
-    <!-- ArtBench -->
+
+
+    <!-- ARTBENCH -->
+
     <div class="paper-results-row">
-      <div class="dataset-name">ArtBench</div>
-    
-      <img src="assets/art-bench/imf_twolines.png"
-           alt="ArtBench iMF 2 NFE">
-    
-      <img src="assets/art-bench/SiT_twolines.png"
-           alt="ArtBench SiT 4 NFE">
-    
-      <img src="assets/art-bench/dit-twolines-8nfe.png"
-           alt="ArtBench DiT 8 NFE">
-    
-      <img src="assets/art-bench/JiT_twolines_4nfe.png"
-           alt="ArtBench JiT 4 NFE">
+
+      <div class="dataset-name">
+        ArtBench
+      </div>
+
+      <img
+        src="assets/art-bench/imf_twolines.png"
+        alt="ArtBench iMF"
+      >
+
+      <img
+        src="assets/art-bench/SiT_twolines.png"
+        alt="ArtBench SiT"
+      >
+
+      <img
+        src="assets/art-bench/dit-twolines-8nfe.png"
+        alt="ArtBench DiT"
+      >
+
+      <img
+        src="assets/art-bench/JiT_twolines_4nfe.png"
+        alt="ArtBench JiT"
+      >
+
     </div>
-  
+
+
+    <p class="results-caption">
+      Target-domain generations from heterogeneous ImageNet-pretrained
+      source models using MF-T + CAMF. Despite different source
+      parameterizations and sampling costs, the adapted models produce
+      high-quality samples using only a few neural function evaluations.
+    </p>
+
   </section>
-  <!-- ====================================================== -->
-  <!-- CITATION -->
-  <!-- ====================================================== -->
+
+
+  <!-- =====================================================
+       METHOD
+       ===================================================== -->
+
+  <section id="method">
+
+    <h2>
+      Method
+    </h2>
+
+
+    <p class="method-intro">
+
+      Our framework consists of two stages.
+      <strong>MeanFlow-Transfer (MF-T)</strong> provides a common
+      interface for pretrained diffusion and flow models with heterogeneous
+      output parameterizations. Source models predicting
+      <em>x</em>, ε, <em>v</em>, or <em>u</em> are mapped into a shared
+      velocity representation, which is used to initialize and adapt a
+      few-step MeanFlow generator to the target domain.
+
+      <strong>Continuous Adversarial MeanFlow (CAMF)</strong> then
+      refines the adapted generator by extending continuous adversarial
+      learning from instantaneous velocities to the finite-interval
+      transport used by MeanFlow. This improves perceptual quality while
+      preserving efficient few-step generation.
+
+    </p>
+
+
+    <!-- =====================================================
+         MF-T FIGURE
+         ===================================================== -->
+
+    <div class="method-figure">
+
+      <img
+        class="mf-image"
+        src="assets/3_3_MFA.png"
+        alt="MeanFlow-Transfer"
+      >
+
+      <p class="method-caption">
+
+        <strong>MeanFlow-Transfer (MF-T).</strong>
+        A pretrained source generator with an arbitrary output
+        parameterization is mapped to a shared instantaneous-velocity
+        representation and used to initialize a target-domain MeanFlow
+        generator. The resulting model is simultaneously adapted to the
+        target domain and converted into a few-step generator.
+
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         CAMF FIGURE
+         ===================================================== -->
+
+    <div class="method-figure">
+
+      <img
+        class="camf-image"
+        src="assets/3_3_CAMF.png"
+        alt="Continuous Adversarial MeanFlow"
+      >
+
+      <p class="method-caption">
+
+        <strong>Continuous Adversarial MeanFlow (CAMF).</strong>
+        Starting from the adapted MeanFlow generator, CAMF compares
+        potential changes along real and model-predicted target-domain
+        transport intervals. This adversarial post-training stage improves
+        fine-detail generation without changing the few-step sampling
+        procedure at inference time.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CITATION
+       ===================================================== -->
 
   <section id="citation">
 
-    <h2>Citation</h2>
+    <h2>
+      Citation
+    </h2>
 
     <p>
       If you find this work useful, please consider citing:
@@ -644,26 +669,28 @@
 
 <pre>
 @inproceedings{bahram2026meanflowadaptation,
-  title     = {Continuous Adversarial Mean Flow Transfer},
-  author    = {Bahram, Yara and Dehghani, Zahra and Desbos, Mélodie
-               and Granger, Eric and Piantanida, Pablo
-               and Shateri, Mohammadhadi},
-  year      = {2026}
+  title  = {Continuous Adversarial Mean Flow Transfer},
+  author = {Bahram, Yara and Dehghani, Zahra and Desbos, Mélodie
+            and Granger, Eric and Piantanida, Pablo
+            and Shateri, Mohammadhadi},
+  year   = {2026}
 }
 </pre>
 
   </section>
 
 
-  <!-- ====================================================== -->
-  <!-- FOOTER -->
-  <!-- ====================================================== -->
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
   <footer>
-    MeanFlow Transfer + Continuous Adversarial MeanFlow
+    Continuous Adversarial Mean Flow Transfer
   </footer>
+
 
 </div>
 
 </body>
+
 </html>
