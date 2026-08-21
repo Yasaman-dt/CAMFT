@@ -199,6 +199,27 @@
       text-align: center;
     }
 
+    .method-definitions {
+      max-width: 800px;
+      margin: 10px auto 0 auto;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #444;
+      text-align: center;
+    }
+
+    .tldr {
+      max-width: 900px;
+      margin: 28px auto 0 auto;
+      padding: 14px 20px;
+      background: #f7f7f7;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
 
     /* =====================================================
        HIGHLIGHTS
@@ -575,93 +596,101 @@
 
 
 
-  <!-- =====================================================
-       2. TEASER / FIGURE 1
-       ===================================================== -->
+<!-- =====================================================
+     2. TEASER / FIGURE 1
+     ===================================================== -->
 
-  <section class="teaser">
+<section class="teaser">
 
-    <img
-      src="assets/1_teaser.png"
-      alt="Overview of MeanFlow-Transfer and CAMF"
-      class="teaser-image"
-    >
+  <img
+    src="assets/1_teaser.png"
+    alt="Overview of MeanFlow-Transfer and CAMF"
+    class="teaser-image"
+  >
 
+  <p class="teaser-caption">
 
-    <p class="teaser-caption">
+    <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
+    or flow model with any output parameterization into a high-quality
+    few-step MeanFlow generator in a target domain, with
+    \(\mathrm{NFE}_{\mathrm{trg}} \ll
+    \mathrm{NFE}_{\mathrm{src}}\)
+    (\(\mathrm{NFE}_{\mathrm{trg}} \sim
+    \mathrm{NFE}_{\mathrm{src}}\) when the source model is already
+    a MeanFlow model).
 
-      <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
-      or flow model with any output parameterization into a high-quality
-      few-step MeanFlow (MF) generator in a target domain with
-      \(\mathrm{NFE}_{\mathrm{trg}}
-      \ll
-      \mathrm{NFE}_{\mathrm{src}}\)
-      (\(\mathrm{NFE}_{\mathrm{trg}}
-      \sim
-      \mathrm{NFE}_{\mathrm{src}}\)
-      if the source model is MF).
+  </p>
 
-    </p>
+  <div class="method-definitions">
 
-  </section>
+    <strong>MF-T (MeanFlow-Transfer)</strong> adapts heterogeneous
+    pretrained diffusion and flow models into few-step MeanFlow generators,
+    while <strong>CAMF (Continuous Adversarial MeanFlow)</strong> further
+    improves their few-step generation quality through adversarial refinement.
 
+  </div>
+
+</section>
 
 
   <!-- =====================================================
        3. HIGHLIGHTS
        ===================================================== -->
-
+  
   <section class="highlights-section">
-
+  
     <div class="highlights">
-
-
-      <!-- Parameterizations -->
-
+  
       <div class="highlight-box">
-
+  
         <div class="highlight-number">
           \(x\ /\ \epsilon\ /\ v\ /\ u\)
         </div>
-
+  
         <div class="highlight-text">
           Supports heterogeneous source parameterizations
         </div>
-
+  
       </div>
-
-
-      <!-- NFE reduction -->
-
+  
+  
       <div class="highlight-box">
-
+  
         <div class="highlight-number">
           Up to 125×
         </div>
-
+  
         <div class="highlight-text">
           Fewer NFE with comparable or better FID and FDD than teacher fine-tuning
         </div>
-
+  
       </div>
-
-      <!-- CAMF improvement -->
-
+  
+  
       <div class="highlight-box">
-
+  
         <div class="highlight-number">
           29%
         </div>
-
+  
         <div class="highlight-text">
-          Average improvement in Few-step FID from in the CAMF stage
+          Average few-step FID improvement of MF-T + CAMF over MF-T
         </div>
-
+  
       </div>
-
-
+  
     </div>
-
+  
+  
+    <div class="tldr">
+  
+      <strong>TL;DR:</strong>
+      We transfer heterogeneous pretrained diffusion and flow models
+      to new target domains as high-quality few-step MeanFlow generators,
+      and further improve generation quality with continuous adversarial refinement.
+  
+    </div>
+  
   </section>
 
 
@@ -1006,8 +1035,20 @@
     </h2>
 
     <p>
-      Citation information will be added upon publication.
+      If you find this work useful, please consider citing:
     </p>
+
+<pre>
+@misc{bahram2026continuousadversarialmeanflowtransfer,
+  title={Continuous Adversarial MeanFlow Transfer},
+  author={Yara Bahram and Zahra Dehghani and Mélodie Desbos and Eric Granger and Pablo Piantanida and Mohammadhadi Shateri},
+  year={2026},
+  eprint={2608.19540},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2608.19540},
+}
+</pre>
 
   </section>
 
