@@ -199,15 +199,6 @@
       text-align: center;
     }
 
-    .method-definitions {
-      max-width: 800px;
-      margin: 10px auto 0 auto;
-      font-size: 15px;
-      line-height: 1.65;
-      color: #444;
-      text-align: center;
-    }
-
     .tldr {
       max-width: 900px;
       margin: 28px auto 0 auto;
@@ -628,26 +619,19 @@
   >
 
   <p class="teaser-caption">
-
-    <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
-    or flow model with any output parameterization into a high-quality
-    few-step MeanFlow generator in a target domain, with
-    \(\mathrm{NFE}_{\mathrm{trg}} \ll
-    \mathrm{NFE}_{\mathrm{src}}\)
-    (\(\mathrm{NFE}_{\mathrm{trg}} \sim
-    \mathrm{NFE}_{\mathrm{src}}\) when the source model is already
-    a MeanFlow model).
-
-  </p>
-
-  <div class="method-definitions">
-
-    <strong>MF-T (MeanFlow-Transfer)</strong> adapts heterogeneous
-    pretrained diffusion and flow models into few-step MeanFlow generators,
+  
+    <strong>MF-T (MeanFlow-Transfer)</strong> transfers heterogeneous
+    pretrained diffusion and flow models to few-step MeanFlow generators,
     while <strong>CAMF (Continuous Adversarial MeanFlow)</strong> further
     improves their few-step generation quality through adversarial refinement.
-
-  </div>
+    Together, <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
+    or flow model with any output parameterization into a high-quality
+    few-step MeanFlow generator in a target domain, with
+    \(\mathrm{NFE}_{\mathrm{trg}} \ll \mathrm{NFE}_{\mathrm{src}}\)
+    (\(\mathrm{NFE}_{\mathrm{trg}} \sim \mathrm{NFE}_{\mathrm{src}}\)
+    when the source model is already a MeanFlow model).
+  
+  </p>
 
 </section>
 
