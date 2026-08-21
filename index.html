@@ -67,10 +67,15 @@
       font-weight: 700;
     }
 
+
+    /* =====================================================
+       AUTHORS
+       ===================================================== */
+
     .authors {
-      font-size: 19px;
-      line-height: 1.8;
-      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.9;
+      margin-bottom: 12px;
     }
 
     .authors a {
@@ -82,16 +87,41 @@
       text-decoration: underline;
     }
 
-    .affiliation {
-      font-size: 17px;
+    .authors sup {
       color: #555;
-      margin-top: 12px;
+      font-size: 12px;
+      margin-left: 2px;
+    }
+
+
+    /* =====================================================
+       AFFILIATIONS
+       ===================================================== */
+
+    .affiliations {
+      max-width: 900px;
+      margin: 12px auto 0 auto;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .affiliations sup {
+      font-size: 11px;
+      margin-right: 2px;
     }
 
     .equal {
       color: #666;
-      font-size: 15px;
-      margin-top: 5px;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .contact {
+      color: #666;
+      font-size: 14px;
+      margin-top: 8px;
     }
 
 
@@ -161,10 +191,10 @@
     }
 
     .teaser-caption {
-      max-width: 700px;
+      max-width: 760px;
       margin: 15px auto 0 auto;
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #555;
       text-align: center;
     }
@@ -186,20 +216,21 @@
 
     .highlight-box {
       background: #f7f7f7;
-      padding: 25px;
+      padding: 25px 20px;
       border-radius: 12px;
       text-align: center;
     }
 
     .highlight-number {
-      font-size: 34px;
+      font-size: 32px;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     .highlight-text {
       color: #555;
       font-size: 15px;
+      line-height: 1.55;
     }
 
 
@@ -246,11 +277,11 @@
 
     .results-header span {
       display: inline-block;
-      margin-top: 3px;
+      margin-top: 4px;
       font-size: 10px;
       font-weight: normal;
       color: #555;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .results-caption {
@@ -275,7 +306,7 @@
       max-width: 950px;
       margin: 0 auto;
       font-size: 17px;
-      line-height: 1.7;
+      line-height: 1.75;
       text-align: justify;
     }
 
@@ -293,13 +324,13 @@
 
 
     /* =====================================================
-       SAME HEIGHT FOR MF-T AND CAMF
+       SAME DISPLAYED HEIGHT FOR MF-T AND CAMF
        ===================================================== */
 
     .mf-image,
     .camf-image {
       display: block;
-      height: 250px;
+      height: 240px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
@@ -366,7 +397,11 @@
       }
 
       .authors {
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      .affiliations {
+        font-size: 14px;
       }
 
 
@@ -392,7 +427,7 @@
       }
 
       .paper-results-row {
-        min-width: 800px;
+        min-width: 820px;
       }
 
 
@@ -428,6 +463,10 @@
     </h1>
 
 
+    <!-- ===================================================
+         AUTHORS + GOOGLE SCHOLAR
+         =================================================== -->
+
     <div class="authors">
 
       <a
@@ -436,7 +475,7 @@
         rel="noopener noreferrer"
       >
         Yara Bahram*
-      </a>,
+      </a><sup>1,2,3</sup>,
 
       <a
         href="https://scholar.google.ca/citations?user=VqHpMu4AAAAJ&hl=en&oi=ao"
@@ -444,7 +483,7 @@
         rel="noopener noreferrer"
       >
         Zahra Dehghani*
-      </a>,
+      </a><sup>1,2,3,4</sup>,
 
       <a
         href="https://scholar.google.ca/citations?user=sANOdsQAAAAJ&hl=en"
@@ -452,7 +491,7 @@
         rel="noopener noreferrer"
       >
         Mélodie Desbos
-      </a>,
+      </a><sup>1,2,3</sup>,
 
       <a
         href="https://scholar.google.ca/citations?user=TmfbdagAAAAJ&hl=en"
@@ -460,7 +499,7 @@
         rel="noopener noreferrer"
       >
         Eric Granger
-      </a>,
+      </a><sup>1,2,3</sup>,
 
       <a
         href="https://scholar.google.ca/citations?user=QyBEFv0AAAAJ&hl=en"
@@ -468,7 +507,7 @@
         rel="noopener noreferrer"
       >
         Pablo Piantanida
-      </a>,
+      </a><sup>2,4,5</sup>,
 
       <a
         href="https://scholar.google.ca/citations?user=TwJO3P5d1S8C&hl=en"
@@ -476,27 +515,53 @@
         rel="noopener noreferrer"
       >
         Mohammadhadi Shateri
-      </a>
+      </a><sup>1,2,3</sup>
 
     </div>
 
 
-    <div class="affiliation">
-      LIVIA, ILLS, ÉTS Montréal, Canada
+    <!-- ===================================================
+         AFFILIATIONS
+         =================================================== -->
+
+    <div class="affiliations">
+
+      <div>
+        <sup>1</sup>LIVIA,
+        <sup>2</sup>ILLS,
+        <sup>3</sup>ÉTS Montréal,
+        <sup>4</sup>Mila – Quebec AI Institute
+      </div>
+
+      <div>
+        <sup>5</sup>CNRS, CentraleSupélec, Université Paris-Saclay
+      </div>
+
     </div>
+
 
     <div class="equal">
       * Equal contribution
     </div>
 
 
+    <div class="contact">
+      yara.mohammadi-bahram@livia.etsmtl.ca,
+      {mohammadhadi.shateri, eric.granger}@etsmtl.ca
+    </div>
+
+
+    <!-- ===================================================
+         BUTTONS
+         No Paper button until publication
+         =================================================== -->
+
     <div class="buttons">
 
-      <a class="button" href="#">
-        📄 Paper
-      </a>
-
-      <a class="button" href="#">
+      <a
+        class="button"
+        href="#"
+      >
         📚 arXiv
       </a>
 
@@ -527,13 +592,19 @@
       class="teaser-image"
     >
 
+
     <p class="teaser-caption">
 
       <strong>MF-T + CAMF</strong> adapts a source-domain diffusion
       or flow model with any output parameterization into a high-quality
       few-step MeanFlow (MF) generator in a target domain with
-      \(\mathrm{NFE}_{\mathrm{trg}} \ll
-      \mathrm{NFE}_{\mathrm{src}}\).
+      \(\mathrm{NFE}_{\mathrm{trg}}
+      \ll
+      \mathrm{NFE}_{\mathrm{src}}\)
+      (\(\mathrm{NFE}_{\mathrm{trg}}
+      \sim
+      \mathrm{NFE}_{\mathrm{src}}\)
+      if the source model is MF).
 
     </p>
 
@@ -550,6 +621,8 @@
     <div class="highlights">
 
 
+      <!-- Parameterizations -->
+
       <div class="highlight-box">
 
         <div class="highlight-number">
@@ -562,6 +635,8 @@
 
       </div>
 
+
+      <!-- CAMF improvement -->
 
       <div class="highlight-box">
 
@@ -576,14 +651,16 @@
       </div>
 
 
+      <!-- NFE reduction -->
+
       <div class="highlight-box">
 
         <div class="highlight-number">
-          125×
+          Up to 125×
         </div>
 
         <div class="highlight-text">
-          Fewer neural function evaluations
+          Fewer Neural Function Evaluations (NFEs)
         </div>
 
       </div>
@@ -606,14 +683,19 @@
     </h2>
 
 
-    <!-- MODEL HEADERS -->
+    <!-- ===================================================
+         MODEL HEADERS
+         =================================================== -->
 
     <div class="paper-results-row results-header">
+
 
       <div>
         Dataset
       </div>
 
+
+      <!-- iMF -->
 
       <div>
 
@@ -631,6 +713,8 @@
       </div>
 
 
+      <!-- SiT -->
+
       <div>
 
         SiT-XL/2
@@ -646,6 +730,8 @@
 
       </div>
 
+
+      <!-- DiT -->
 
       <div>
 
@@ -663,6 +749,8 @@
       </div>
 
 
+      <!-- JiT -->
+
       <div>
 
         JiT-H/16
@@ -677,6 +765,7 @@
         </span>
 
       </div>
+
 
     </div>
 
@@ -796,6 +885,10 @@
 
 
 
+    <!-- ===================================================
+         FIGURE CAPTION
+         =================================================== -->
+
     <p class="results-caption">
 
       Target-domain generated images using
@@ -825,17 +918,16 @@
 
       <strong>MeanFlow-Transfer (MF-T)</strong> provides a common
       interface for pretrained diffusion and flow models with
-      heterogeneous output parameterizations. Source models predicting
+      heterogeneous source parameterizations. Source models predicting
       \(x\), \(\epsilon\), \(v\), or \(u\) are mapped into a shared
       instantaneous-velocity representation, which is used to initialize
       and adapt a few-step MeanFlow generator \(u_\theta\) to the
       target domain.
 
       <strong>Continuous Adversarial MeanFlow (CAMF)</strong> then
-      refines the adapted generator by extending continuous adversarial
-      learning from instantaneous velocities to MeanFlow's
-      finite-interval average velocities. This improves generation
-      quality while preserving efficient few-step inference.
+      refines the adapted MF model by extending continuous adversarial
+      learning from instantaneous velocities to the finite-interval
+      average velocity predicted by MeanFlow.
 
     </p>
 
@@ -920,19 +1012,8 @@
     </h2>
 
     <p>
-      If you find this work useful, please consider citing:
+      Citation information will be added upon publication.
     </p>
-
-
-<pre>
-@inproceedings{bahram2026meanflowtransfer,
-  title  = {Continuous Adversarial MeanFlow Transfer},
-  author = {Bahram, Yara and Dehghani, Zahra and Desbos, Mélodie
-            and Granger, Eric and Piantanida, Pablo
-            and Shateri, Mohammadhadi},
-  year   = {2026}
-}
-</pre>
 
   </section>
 
