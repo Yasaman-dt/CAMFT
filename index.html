@@ -199,35 +199,32 @@
       text-align: center;
     }
 
+    .summary-box {
+      max-width: 1000px;
+      margin: 28px auto 0 auto;
+      padding: 20px;
+      background: #f7f7f7;
+      border-radius: 14px;
+    }
+    
     .tldr {
       max-width: 900px;
-      margin: 28px auto 0 auto;
-      padding: 14px 20px;
-      background: #f7f7f7;
-      border-radius: 10px;
+      margin: 0 auto 18px auto;
+      padding: 10px 15px;
       font-size: 16px;
       line-height: 1.6;
       text-align: center;
       color: #333;
     }
-
-
-    /* =====================================================
-       HIGHLIGHTS
-       ===================================================== */
-
-    .highlights-section {
-      margin-top: 45px;
-    }
-
+    
     .highlights {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-
+    
     .highlight-box {
-      background: #f7f7f7;
+      background: #ffffff;
       padding: 25px 20px;
       border-radius: 12px;
       text-align: center;
@@ -591,69 +588,61 @@
 
     </div>
 
-    <div class="tldr">
-    
-      <strong>TL;DR:</strong>
-      We transfer heterogeneous pretrained diffusion and flow models
-      to new target domains as high-quality few-step MeanFlow generators,
-      and further improve generation quality with continuous adversarial refinement.
-    
+ <div class="summary-box">
+
+  <div class="tldr">
+
+    <strong>TL;DR:</strong>
+    We transfer heterogeneous pretrained diffusion and flow models
+    to new target domains as high-quality few-step MeanFlow generators,
+    and further improve generation quality with continuous adversarial refinement.
+
+  </div>
+
+
+  <div class="highlights">
+
+    <div class="highlight-box">
+
+      <div class="highlight-number">
+        \(x\ /\ \epsilon\ /\ v\ /\ u\)
+      </div>
+
+      <div class="highlight-text">
+        Supports heterogeneous source parameterizations
+      </div>
+
     </div>
 
 
-    
-  </header>
+    <div class="highlight-box">
 
+      <div class="highlight-number">
+        Up to 125×
+      </div>
 
-  <!-- =====================================================
-       3. HIGHLIGHTS
-       ===================================================== -->
-  
-  <section class="highlights-section">
-  
-    <div class="highlights">
-  
-      <div class="highlight-box">
-  
-        <div class="highlight-number">
-          \(x\ /\ \epsilon\ /\ v\ /\ u\)
-        </div>
-  
-        <div class="highlight-text">
-          Supports heterogeneous source parameterizations
-        </div>
-  
+      <div class="highlight-text">
+        Fewer NFE with comparable or better FID and FDD than teacher fine-tuning
       </div>
-  
-  
-      <div class="highlight-box">
-  
-        <div class="highlight-number">
-          Up to 125×
-        </div>
-  
-        <div class="highlight-text">
-          Fewer NFE with comparable or better FID and FDD than teacher fine-tuning
-        </div>
-  
-      </div>
-  
-  
-      <div class="highlight-box">
-  
-        <div class="highlight-number">
-          29%
-        </div>
-  
-        <div class="highlight-text">
-          Average improvement in Few-step FID in the CAMF stage
-        </div>
-  
-      </div>
-  
+
     </div>
-  
-  </section>
+
+
+    <div class="highlight-box">
+
+      <div class="highlight-number">
+        29%
+      </div>
+
+      <div class="highlight-text">
+        Average improvement in Few-step FID in the CAMF stage
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
 
